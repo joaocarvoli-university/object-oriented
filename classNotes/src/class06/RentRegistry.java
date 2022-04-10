@@ -1,8 +1,8 @@
 package class06;
 
 public class RentRegistry {
-    Car car; // points to null
-    int valueRent;
+    private Car car; // points to null
+    private int valueRent;
 
     public void setCar(Car carReference) {this.car = carReference;} // now, the car variable points to the car from the Main function whose the reference was passed
 

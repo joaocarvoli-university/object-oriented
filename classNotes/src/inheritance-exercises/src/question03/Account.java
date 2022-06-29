@@ -1,9 +1,9 @@
 package question03;
 
 public class Account {
-    int number;
-    double balance = 0;
-    int agency;
+    private final int number;
+    private double balance = 0;
+    private final int agency;
     String holder;
 
     public Account(String holder, int number, int agency){
@@ -11,6 +11,15 @@ public class Account {
         this.number = number;
         this.agency = agency;
     }
+
+    public int getNumber(){
+        return number;
+    }
+
+    public int getAgency(){
+        return agency;
+    }
+
 
     public void doDeposit(double value){
         balance += value;

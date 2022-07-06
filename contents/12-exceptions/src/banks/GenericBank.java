@@ -15,7 +15,6 @@ public class GenericBank implements IBank {
     public void registerAccount(AccountAbstract account){
         accounts.toInsert(account);
         accounts.toRemove(account.getNumber());
-
     }
     public void debit(String number, double value) throws InsufficientBalance,InexistentAccount{
         AccountAbstract account = accounts.searchAccount(number);
@@ -29,8 +28,6 @@ public class GenericBank implements IBank {
             throw new InexistentAccount(number);
         }
     }
-
-
 
     @Override
     public double totalBalance() {
